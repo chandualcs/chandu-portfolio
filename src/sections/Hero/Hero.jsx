@@ -43,7 +43,7 @@ function Hero() {
                     <img className={styles.icon} src={linkedInIcon} alt="LinkedIn Icon" />
                 </a>
             </span>
-            <p className={styles.description}>With a passion to develop AI models and data science hello everyone how are you.</p>
+            <p className={styles.description}>Aspiring Data Scientist passionate about leveraging AI, machine learning, and data analytics to develop impactful solutions and uncover actionable insights.</p>
             <a href={CV} download>
                 <button className="hover">Resume</button>
             </a>
