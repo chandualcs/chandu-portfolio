@@ -6,6 +6,10 @@
   --text-color: #222;
   --form-text-color: #555;
   --footer-text-color: #888;
+  --button-active-background-color: #000000;
+  --button-active-text-color: #fff;
+  --button-background-color: #f0f0f0;
+  --button-text-color: #000000;
 }
 
 [data-theme='dark'] {
@@ -16,6 +20,10 @@
   --text-color: #fff;
   --form-text-color: #fff;
   --footer-text-color: #bbb;
+  --button-active-background-color: #fff;
+  --button-active-text-color: #000000;
+  --button-background-color: #999999;
+  --button-text-color: #fffefe;
 }
 
 body {

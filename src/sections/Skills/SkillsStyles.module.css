@@ -1,4 +1,4 @@
-.container {
+/* .container {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -44,4 +44,159 @@ hr {
   hr {
     width: 300px;
   }
+}
+
+*/
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  img {
+    width: 20px;
+  }
+
+}
+
+.tabContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.tabContainer button {
+  padding: 1rem 2rem;
+  margin: 0 1rem;
+  border: none;
+  cursor: pointer;
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.tabContainer button:hover {
+  background-color: #ababab;
+  transform: scale(1.15);
+}
+
+.tabContainer button.activeTab {
+  background-color: var(--button-active-background-color);
+  color: var(--button-active-text-color);
+  transform: scale(1.05);
+}
+
+.tabContent {
+  text-align: center;
+}
+
+.skillList {
+  display: flex;
+  justify-content: space-evenly;
+  align-self: center;
+  flex-wrap: wrap;
+  row-gap: 40px;
+  max-width: 26ch;
+}
+
+hr {
+  width: 100px;
+  height: 1px;
+  border: none;
+  background-color: var(--text-color);
+  margin: 30px auto;
+}
+
+
+.educationContainer {
+  display: flex;
+  justify-content: space-between; /* Ensures left and right portions are aligned */
+  align-items: center; /* Aligns items vertically */
+  gap: 20px; /* Adds spacing between left and right boxes */
+  padding: 8px;
+  margin: 0 23vw;
+}
+
+/* Left box styling */
+.leftBox {
+  flex: 2; /* Occupies 2/3 of the container */
+  text-align: left; /* Align text to the left */
+  margin: 10px 0;
+}
+
+/* Right box styling */
+.rightBox {
+  flex: 1; /* Occupies 1/3 of the container */
+  text-align: right; /* Align text to the right */
+  margin: 10px 0;
+}
+
+/* College name styling */
+.collegeName {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+/* Degree styling */
+.degree {
+  font-size: 1rem;
+}
+
+/* Timeline styling */
+.timeline {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* CGPA styling */
+.cgpa {
+  font-size: 1rem;
+}
+
+@media (width >= 800px) {
+  .skillList {
+    max-width: fit-content;
+    gap: 30px;
+
+    p {
+      font-size: 20px;
+    }
+  }
+
+  hr {
+    width: 300px;
+  }
+}
+
+@media (width <= 800px) {
+  
+  .educationContainer { 
+    margin: 0 2vw;
+  }
+  .collegeName {
+    font-size: 15px;
+  }
+  .degree {
+    font-size: 12px;
+  }
+  .timeline {
+    font-size: 14px;
+  }
+  .cgpa {
+    font-size: 12px;
+  }
+  .tabContainer button {
+    padding: 10px 15px;
+  }
+
+
 }

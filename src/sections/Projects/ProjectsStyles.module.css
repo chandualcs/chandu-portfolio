@@ -21,7 +21,9 @@
       transform: scale(1.05);
     }
   }
-  
+  /* .sectionTitle{
+    margin-top: 55px;
+  } */
   .projectsContainer {
     display: flex;
     flex-direction: column;
