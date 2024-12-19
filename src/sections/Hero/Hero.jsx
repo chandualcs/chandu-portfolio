@@ -44,7 +44,7 @@ function Hero() {
                 </a>
             </span>
             <p className={styles.description}>Aspiring Data Scientist passionate about leveraging AI, machine learning, and data analytics to develop impactful solutions and uncover actionable insights.</p>
-            <a href={CV} download>
+            <a href={CV} >
                 <button className="hover">Resume</button>
             </a>
         </div>

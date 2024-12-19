@@ -104,3 +104,15 @@
     }
   }
   
+
+  @media (width <= 490px) {
+    .container {
+      padding: 5px 25px 0 26px;
+  }
+  .info {
+    h1{
+      font-size: 23px;
+    }
+  }
+  
+}
