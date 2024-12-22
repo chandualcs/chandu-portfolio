@@ -56,5 +56,8 @@ nav {
   nav ul li a {
     display: none;
   }
+  nav{
+    padding: 5px;
+  }
 }
   

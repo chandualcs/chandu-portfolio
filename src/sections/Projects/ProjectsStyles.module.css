@@ -55,3 +55,9 @@
   .tabContent {
     text-align: center;
   }
+
+  @media (max-width: 410px) {
+    .tabContainer button {
+      font-size: 13px;
+    }
+  }
