@@ -1,10 +1,14 @@
 nav {
     position: fixed;
-    top: 0;
+    top: -1;
     width: 100%;
-    background-color: #f5f5f5;
+    background-color: var(--card-background-color);
     padding: 1rem;
     z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
   }
   
   nav ul {
@@ -13,19 +17,44 @@ nav {
     justify-content: center;
     margin: 0;
     padding: 0;
+    align-items: center;
   }
   
+  .images img{
+    width: 30px;
+    margin: 0 10px 0 10px;
+  }
+
   nav ul li {
     margin: 0 1rem;
   }
+  nav ul img{
+    width: 30px;
+  }
   
   nav ul li a {
-    color: #000000;
+    color: var(--text-color);
     text-decoration: none;
+    cursor: pointer;
+  }
+  nav .images a img{
+    border-radius: 20%;
+    width: 30px;
+  }
+  nav .images a img:hover {
     cursor: pointer;
   }
   
   nav ul li a:hover {
-    text-decoration: underline;
+    font-weight: bold;
   }
+ 
+  nav ul a img:hover{
+    cursor: pointer;
+  }
+@media (max-width: 600px){
+  nav ul li a {
+    display: none;
+  }
+}
   

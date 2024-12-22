@@ -1,42 +1,57 @@
-.container {
+   .container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    background-color: var(--background-color);
+    
+  }
+  .sectionTitle{
     text-align: center;
-  
-    img {
-      max-width: 250px;
-      align-self: center;
-      background-color: var(--project-card-bg);
-      border-radius: 20px;
-    }
-  
-    a {
-      width: fit-content;
-      text-decoration: none;
-      color: #222;
-      transition: transform 200ms ease-in-out;
-    }
-  
-    a:hover {
-      transform: scale(1.05);
-    }
+    margin-top: 70px;
   }
-  /* .sectionTitle{
-    margin-top: 55px;
-  } */
-  .projectsContainer {
+  
+  .projectContainer {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
     align-items: center;
-    gap: 30px;
+    margin-bottom: 2rem;
+    
+  }
+
+ 
+  .tabContainer {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0 2rem 0;
   }
   
-  @media (width >= 800px) {
-    .projectsContainer {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-evenly;
-      padding: 0 30px;
-    }
+  .tabContainer button {
+    padding: 10px 15px;
+    margin: 0 1rem;
+    border: none;
+    cursor: pointer;
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    font-size: 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
   }
   
+  .tabContainer button:hover {
+    background-color: #ababab;
+    transform: scale(1.15);
+  }
+  
+  .tabContainer button.activeTab {
+    background-color: var(--button-active-background-color);
+    color: var(--button-active-text-color);
+    transform: scale(1.05);
+  }
+  
+  .tabContent {
+    text-align: center;
+  }

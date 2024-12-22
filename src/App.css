@@ -6,10 +6,11 @@
   --text-color: #222;
   --form-text-color: #555;
   --footer-text-color: #888;
-  --button-active-background-color: #000000;
+  --button-active-background-color: #0987f2;
   --button-active-text-color: #fff;
   --button-background-color: #f0f0f0;
   --button-text-color: #000000;
+  --card-background-color: #fafafa;
 }
 
 [data-theme='dark'] {
@@ -24,6 +25,7 @@
   --button-active-text-color: #000000;
   --button-background-color: #999999;
   --button-text-color: #fffefe;
+  --card-background-color: #272727;
 }
 
 body {
@@ -84,7 +86,7 @@ p {
 
 @media (width >= 800px) {
   #root {
-    gap: 100px;
+    gap: 10px;
   }
   h1 {
     font-size: 40px;
@@ -103,7 +105,7 @@ p {
 
   @media (width >= 1400px) {
     #root {
-      gap: 200px;
+      gap: 0px;
     }
     h1 {
       font-size: 48px;

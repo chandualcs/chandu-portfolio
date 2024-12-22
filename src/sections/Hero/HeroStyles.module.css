@@ -23,6 +23,9 @@
         img {
           width: 30px;
         }
+        img:hover {
+          transform: scale(1.05);
+        }
       }
     }
   
@@ -105,7 +108,7 @@
   }
   
 
-  @media (width <= 490px) {
+  @media (width <= 600px) {
     .container {
       padding: 5px 25px 0 26px;
   }

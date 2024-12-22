@@ -7,6 +7,7 @@ import Projects from './sections/Projects/Projects.jsx';
 import Skills from './sections/Skills/Skills.jsx';
 import Contact from './sections/Contact/Contact.jsx';
 import Footer from './sections/Footer/Footer.jsx';
+import Navbar from './sections/Navbar/Navbar.jsx';
 
 
 
@@ -14,6 +15,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ThemeProvider>
       <App />
+      {/* <Navbar/> */}
       <Projects/>
       <Skills/>
       <Contact/>

@@ -1,55 +1,3 @@
-// import styles from './SkillsStyles.module.css';
-// import checkMarkIconDark from '../../assets/checkmark-dark.svg';
-// import checkMarkIconLight from '../../assets/checkmark-light.svg';
-// import SkillList from '../../common/SkillList';
-// import { useTheme } from '../../common/ThemeContext';
-
-// function Skills() {
-//   const { theme } = useTheme();
-//   const checkMarkIcon = theme === 'light' ? checkMarkIconLight : checkMarkIconDark;
-
-//   return (
-//     <section id="skills" className={styles.container}>
-//       <h1 className="sectionTitle">Skills</h1>
-//       <div className={styles.skillList}>
-//         <SkillList src={checkMarkIcon} skill="Machine Learning" />
-//         <SkillList src={checkMarkIcon} skill="Deep Learning" />
-//         <SkillList src={checkMarkIcon} skill="Computer Vision" />
-//         <SkillList src={checkMarkIcon} skill="GenAI" />
-//         <SkillList src={checkMarkIcon} skill="LLMs" />
-//       </div>
-//       <hr />
-//       <div className={styles.skillList}>
-//         <SkillList src={checkMarkIcon} skill="Python" />
-//         <SkillList src={checkMarkIcon} skill="MySQL" />
-//         <SkillList src={checkMarkIcon} skill="C" />
-//         <SkillList src={checkMarkIcon} skill="C++" />
-//         <SkillList src={checkMarkIcon} skill="HTML" />
-//         <SkillList src={checkMarkIcon} skill="CSS" />
-//         <SkillList src={checkMarkIcon} skill="JavaScript" />
-//         <SkillList src={checkMarkIcon} skill="GIT" />
-//       </div>
-//       <hr />
-//       <div className={styles.skillList}>
-//         <SkillList src={checkMarkIcon} skill="Docker" />
-//         <SkillList src={checkMarkIcon} skill="Hadoop" />
-//         <SkillList src={checkMarkIcon} skill="Spark" />
-//         <SkillList src={checkMarkIcon} skill="ReactJs" />
-//       </div>
-//       <hr />
-//       <div className={styles.skillList}>
-//         <SkillList src={checkMarkIcon} skill="Matplotlip" />
-//         <SkillList src={checkMarkIcon} skill="PowerBI" />
-//         <SkillList src={checkMarkIcon} skill="Excel" />
-//       </div>
-//     </section>
-//   );
-// }
-
-// export default Skills;
-
-
-
 import React, { useState } from 'react';
 import styles from './SkillsStyles.module.css';
 import checkMarkIconDark from '../../assets/checkmark-dark.svg';
@@ -59,12 +7,32 @@ import { useTheme } from '../../common/ThemeContext';
 
 function Skills() {
   const { theme } = useTheme();
-  const [activeTab, setActiveTab] = useState('skills'); // Default to 'skills'
+  const [activeTab, setActiveTab] = useState('publications'); // Default to 'skills'
   const checkMarkIcon = theme === 'light' ? checkMarkIconLight : checkMarkIconDark;
 
   // Tab Content
   const renderContent = () => {
     switch (activeTab) {
+      case 'publications':
+        return (
+          <div className={styles.publicationContainer}>
+            <h2>Recent Publication</h2>
+            <div className={styles.publicationCard}>
+              <h3 className={styles.publicationTitle}>
+                StairDepth: A Novel Staircase Detection through Synthetic Depth Maps for Guiding Robotic Locomotions and Visually Impaired
+              </h3>
+              <p className={styles.publicationAuthors}>
+                <strong>Authors:</strong> Laxmi Chandra Shekar Avire, Bhuvana Chandrika M, Hemanth Naidu V, Dr. Naresh Babu Muppalaneni
+              </p>
+              <p className={styles.publicationJournal}>
+                <strong>Journal:</strong> International Journal of Information Technology, Singapore
+              </p>
+              <p className={styles.publicationStatus}>
+                <strong>Status:</strong> Major reviews received, In Proceedings
+              </p>
+            </div>
+          </div>
+        );
       case 'skills':
         return (
           <div className={styles.container}>
@@ -159,7 +127,14 @@ function Skills() {
 
   return (
     <section id="skills" className={styles.container}>
+      <h1 className={styles.aboutMe}>About</h1>
       <div className={styles.tabContainer}>
+        <button
+          className={activeTab === 'publications' ? styles.activeTab : ''}
+          onClick={() => setActiveTab('publications')}
+        >
+          Publications
+        </button>
         <button
           className={activeTab === 'skills' ? styles.activeTab : ''}
           onClick={() => setActiveTab('skills')}

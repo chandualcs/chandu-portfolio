@@ -6,7 +6,7 @@ import Projects from './sections/Projects/Projects'
 function App() {
   return (
     <>
-      {/* <Navbar/> */}
+      <Navbar/>
       <Hero/>
     </>
     
