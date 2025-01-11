@@ -1,4 +1,4 @@
-# Portfolio Link: [https://chandualcs.netlify.app/](url)
+# Portfolio Link: https://chandualcs.netlify.app
 
 # React + Vite
 
