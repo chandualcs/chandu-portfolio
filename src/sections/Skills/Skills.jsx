@@ -106,17 +106,35 @@ function Skills() {
         );
       case 'experience':
         return (
-          <div className={styles.content}>
-            <div className={styles.educationContainer}>
-              <div className={styles.leftBox}>
-                <p className={styles.collegeName}>Project Intern at Defence Electronics Research Laboratory, Hyderabad</p>
-                <p className={styles.degree}>Project Title: Development of AI Systems - Design and Testing Perspective</p>
-                <p className={styles.degree}>Collaborating on the design and implementation of AI systems for Medical applications.</p>
-                <p className={styles.degree}>Conducting rigorous testing and evaluation to ensure system reliability and efficiency.</p>
-              </div>
-              <div className={styles.rightBox}>
-                <p className={styles.timeline}>12/06/24 – 31/08/24</p>
-              </div>
+          // <div className={styles.content}>
+          //   <div className={styles.educationContainer}>
+          //     <div className={styles.leftBox}>
+          //       <p className={styles.collegeName}>Project Intern at Defence Electronics Research Laboratory, Hyderabad</p>
+          //       <p className={styles.degree}>Project Title: Development of AI Systems - Design and Testing Perspective</p>
+          //       <p className={styles.degree}>Collaborating on the design and implementation of AI systems for Medical applications.</p>
+          //       <p className={styles.degree}>Conducting rigorous testing and evaluation to ensure system reliability and efficiency.</p>
+          //     </div>
+          //     <div className={styles.rightBox}>
+          //       <p className={styles.timeline}>12/06/24 – 31/08/24</p>
+          //     </div>
+          //   </div>
+          // </div>
+
+          <div className={styles.publicationContainer}>
+            <h2>Project Intern at Defence Electronics and Research Laboratory, Hyderabad</h2>
+            <div className={styles.publicationCard}>
+              <h3 className={styles.publicationTitle}>
+              Project Title: Development of AI Systems - Design and Testing Perspective
+              </h3>
+              <p className={styles.publicationAuthors}>
+              Collaborating on the design and implementation of AI systems for Medical applications.
+              </p>
+              <p className={styles.publicationAuthors}>
+              Conducting rigorous testing and evaluation to ensure system reliability and efficiency.
+              </p>
+              <p className={styles.publicationStatus}>
+                <strong>Duration:</strong> 12/06/2024 -- 31/08/2024
+              </p>
             </div>
           </div>
         );

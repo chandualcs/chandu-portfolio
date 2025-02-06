@@ -39,8 +39,8 @@
 }
 
 .tabContainer button:hover {
-  background-color: #ababab;
-  transform: scale(1.15);
+  background-color: #999999;
+  transform: scale(1.1);
 }
 
 .tabContainer button.activeTab {

@@ -49,6 +49,16 @@
   .card-link:hover {
     text-decoration: underline;
   }
+
+  .skill-section{
+    font-size: 14px;
+  }
+  .skill-icon{
+    width: 16px;
+    height: 16px;
+    margin: 0 4px 4px 0;
+    vertical-align: middle;
+  }
   
   .github-icon {
     width: 16px;
