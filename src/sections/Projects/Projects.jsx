@@ -27,6 +27,8 @@ const Projects = () => {
               description="Translation of videos across multiple Indian and foreign languages ensuring lip sync."
               repoLink="https://github.com/chandualcs/Lip-Sync-video-Translator"
               skill="GenAI, NLP, NMT, TTS, Vocoder"
+              description2="A video with speech in language L(A) is translated to target language L(B) ensuring lip sync accroding to the translated speech while maintaining the original voice of the speaker."
+              // shouldFlipp={true}
             />
             <Card
               image={stairDepth}
@@ -34,6 +36,7 @@ const Projects = () => {
               description="Cost-effective staircase detection system improved precision, recall, and IoU significantly."
               repoLink="https://github.com/chandualcs/StairDepth-A-Novel-Staircase-detection"
               skill="DL, CNN, CV, Depth analysis"
+              // shouldFlipp={true}
             />
             <Card
               image={humanEmotionRecognition}
@@ -41,6 +44,7 @@ const Projects = () => {
               description="CNN-based emotion recognition model achieved 73.05% accuracy using AffectNet dataset."
               repoLink="https://github.com/chandualcs/HumanEmotionRecognition"
               skill="ResNet50, CNN, kaggle"
+              // shouldFlipp={true}
             />
           </div>
         );

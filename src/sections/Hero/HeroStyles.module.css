@@ -6,7 +6,7 @@
     text-align: center;
     height: 100dvh;
     min-height: 500px;
-    padding: 0 80px 0 80px;
+    padding: 0 120px 0 120px;
   
     .hero {
       max-width: 200px;
@@ -15,40 +15,43 @@
     span {
       display: flex;
       gap: 25px;
-      justify-content: center;
+      justify-content: left;
   
       a {
         margin: 0;
   
         img {
           width: 30px;
+          border-radius: 2px;
         }
         img:hover {
           transform: scale(1.05);
         }
       }
     }
-  
-    a {
+    
+    /* a {
       width: fit-content;
-      align-self: center;
-    }
+      align-self: left;
+    } */
   
     button {
       background-color: var(--btn-color);
       color: var(--btn-text-color);
       border: none;
-      border-radius: 20px;
-      width: 126px;
-      height: 50px;
-      font-size: 20px;
+      border-radius: 10px;
+      width: 90px;
+      height: 42px;
+      font-size: 17px;
       font-weight: bold;
       box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
       transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
+      
     }
   
     button:hover {
       transform: scale(1.05);
+      cursor: pointer;
     }
   
     button:active {
@@ -75,7 +78,8 @@
     display: flex; /* Enables Flexbox */
     justify-content: center; /* Centers horizontally */
     align-items: center; /* Centers vertically */
-    text-align: center;
+    text-align: left;
+    width: 85%;
   }
   
   .info {
@@ -83,9 +87,16 @@
     flex-direction: column;
     justify-content: center;
     gap: 20px;
+    text-align: left;
+
+    
+  }
+  .buttons{
+    display: flex;
+    gap: 20px;
   }
   
-  @media (width >= 800px) {
+  @media (width >= 1020px) {
     .container {
       flex-direction: row-reverse;
       align-items: center;
@@ -116,6 +127,8 @@
     h1{
       font-size: 23px;
     }
+    position: relative;
+    left: 5%;
   }
   
   }

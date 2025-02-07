@@ -1,0 +1,13 @@
+.typing-effect {
+    font-weight: bold;
+    color: var(--text-color);
+    /* border-right: 3px solid white; Cursor Effect */
+    /* animation: blinkCursor 0.8s ; */
+  }
+  
+  @keyframes blinkCursor {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
