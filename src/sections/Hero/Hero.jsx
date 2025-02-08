@@ -47,22 +47,23 @@ function Hero() {
                 <a href="mailto:chandualcs@gmail.com" target="_blank" rel="noopener noreferrer">
                     <img className={styles.icon} src={msgGIF} alt="Email Icon"/>
                 </a>
-                <a href="https://wa.me/7207814656" target="_blank" rel="noopener noreferrer">
-                    <img className={styles.icon} src={whatsappIcon} alt="Email Icon"/>
-                </a>
-                <a href="tel:+917207814656">
-                    <img className={styles.icon} src={call} alt="Email Icon"/>
-                </a>
             </span>
             <p className={styles.description}>
-                Welcome!, I am Aspiring Data Scientist passionate about leveraging AI, machine learning, and data analytics to develop impactful solutions and uncover actionable insights.
+            Building AI that sees and speaks! 🚀 From stair detection for accessibility to lip-sync translation—check out my Projects📁 & Publications📜!.
+            
             </p>
+            
             <div className={styles.buttons}>
-                <a href={CV} >
+                <a href={CV} target='_blank'>
                     <button className="resume">Resume</button>                
                 </a>
-                <Link to="contact" smooth={true} duration={800}><button className="contact">Contact</button></Link>
+                <Link to="Projects" smooth={true} duration={400}><button className="Projects">Projects</button></Link>
+                <Link to="skills" smooth={true} duration={800}><button className="Publications">Publications</button></Link>
             </div>
+            <div className={styles.letsConnect}>
+            <Link to="contact" smooth={true} duration={400}><button className={styles.connect}>Let's Connect!🤝</button></Link>
+            </div>
+            
             
         </div>
     </section>

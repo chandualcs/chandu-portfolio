@@ -4,7 +4,9 @@ import stairDepth from '../../assets/clg_13.jpeg';
 import humanEmotionRecognition from '../../assets/Emotion-Detection.png';
 import LipSync from '../../assets/poster.jpg';
 import BlinkIt_sales from '../../assets/blinkit_dashboard.png';
-import Pizza_sales from '../../assets/Pizzas-sales.jpg'
+import Pizza_sales from '../../assets/Pizzas-sales.jpg';
+import lip_sync_pipiline from '../../assets/lip-sync-pipe.png'
+import stairDepth_model from '../../assets/stairDepth.png'
 import ProjectCard from '../../common/ProjectCard';
 import Card from '../Card/Card';
 import { useTheme } from '../../common/ThemeContext';
@@ -22,29 +24,44 @@ const Projects = () => {
         return(
           <div className={styles.projectContainer}>
             <Card
+              shouldFlipp={true}
               image={LipSync}
               title="Lip-Sync-video-Translator"
               description="Translation of videos across multiple Indian and foreign languages ensuring lip sync."
               repoLink="https://github.com/chandualcs/Lip-Sync-video-Translator"
               skill="GenAI, NLP, NMT, TTS, Vocoder"
-              description2="A video with speech in language L(A) is translated to target language L(B) ensuring lip sync accroding to the translated speech while maintaining the original voice of the speaker."
-              // shouldFlipp={true}
+              description21="=> Ensuring lip sync accroding to the translated audio while maintaining the original voice of the speaker."
+              description22="=> L(A) can be any language."
+              description23="=> L(B) can be Telugu, Hindi, Kannada, Bengali, Chattisgari or Marathi."
+              
+              description24="=> Multilingual speech to text translation, text to speech generation with vocoder and audio based lip synchronizer."
+              resultLink1="https://github.com/chandualcs/Lip-Sync-video-Translator"
+              description25="English video translated to Telugu"
             />
             <Card
+              shouldFlipp={true}
               image={stairDepth}
               title="StairDepth"
               description="Cost-effective staircase detection system improved precision, recall, and IoU significantly."
               repoLink="https://github.com/chandualcs/StairDepth-A-Novel-Staircase-detection"
               skill="DL, CNN, CV, Depth analysis"
-              // shouldFlipp={true}
+              // Back side
+              description21="=> Staicase detection to guide robotic lomotions and visually impaired."
+              description22="=> RGB Image (512x512x3) is given as input."
+              description23="=> Classification of stair edges as concave or convex edges and surface as treader or riser."
+              description24="=> Depth Module to generate depth of RGB images and sequential SE-ResNext blocks(Squeeze and excitation Grouped convolutions)"
+              description25="Segmantation Result."
+              resultLink1="https://github.com/chandualcs/StairDepth-A-Novel-Staircase-detection/blob/main/Results.png"
             />
             <Card
+              shouldFlipp={false}
               image={humanEmotionRecognition}
               title="Human Emotion Recognition"
               description="CNN-based emotion recognition model achieved 73.05% accuracy using AffectNet dataset."
               repoLink="https://github.com/chandualcs/HumanEmotionRecognition"
               skill="ResNet50, CNN, kaggle"
-              // shouldFlipp={true}
+              //back side
+              
             />
           </div>
         );
