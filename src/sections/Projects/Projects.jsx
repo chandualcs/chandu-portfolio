@@ -8,6 +8,11 @@ import Pizza_sales from '../../assets/Pizzas-sales.jpg';
 import lip_sync_pipiline from '../../assets/lip-sync-pipe.png'
 import stairDepth_model from '../../assets/stairDepth.png'
 import ProjectCard from '../../common/ProjectCard';
+import Original_video from '../../assets/Original_English.mp4';
+import Telugu_video from '../../assets/Telugu_translated.mp4';
+import Hindi_video from '../../assets/HindiVideo.mp4';
+import Bengali_video from '../../assets/BengaliVideo.mp4';
+import Kannada_video from '../../assets/KannadaVideo.mp4';
 import Card from '../Card/Card';
 import { useTheme } from '../../common/ThemeContext';
 import React, { useState } from 'react';
@@ -37,6 +42,12 @@ const Projects = () => {
               description24="=> Multilingual speech to text translation, text to speech generation with vocoder and audio based lip synchronizer."
               resultLink1="https://github.com/chandualcs/Lip-Sync-video-Translator"
               description25="English video translated to Telugu"
+              hasVideo={true}
+              video1={Original_video}
+              TeluguVideo={Telugu_video}
+              HindiVideo={Hindi_video}
+              BengaliVideo={Bengali_video}
+              KannadaVideo={Kannada_video}
             />
             <Card
               shouldFlipp={true}

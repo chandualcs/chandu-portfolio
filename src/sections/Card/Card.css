@@ -203,3 +203,114 @@
   color: #007bff;
   font-weight: bold;
 }
+
+
+/* For videos */
+
+/* Background overlay */
+.video-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal box */
+.video-modal {
+  background: var(--card-background-color);
+  width: 80%;
+  max-width: 900px;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Close button */
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  background-color: var(--button-active-background-color);
+  border-radius: 50%;
+}
+
+/* Video container */
+.video-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Video players */
+.video-player {
+  width: 45%;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Show Videos button */
+.show-videos-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 4px 15px;
+  /* margin-top: 10px; */
+  margin-left: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.show-videos-btn:hover {
+  background: #0056b3;
+}
+
+.language-buttons{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 8px 0px;
+  margin-top: 7px;
+  button{
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    border: none;
+    padding: 4px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.3s
+  }
+  button.activeTab{
+    background-color: var(--button-active-background-color);
+    color: var(--button-active-text-color);
+    transform: scale(1.05);
+  }
+}
+
+/* Responsive layout: Stack videos vertically when screen width is < 1200px */
+@media (max-width: 800px) {
+  .video-container {
+      flex-direction: column; /* Stack videos */
+      align-items: center;
+  }
+
+  .video-player {
+      width: 90%; /* Make video take most of the width */
+  }
+}

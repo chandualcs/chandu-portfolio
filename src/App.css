@@ -8,7 +8,8 @@
   --footer-text-color: #888;
   --button-active-background-color: #0987f2;
   --button-active-text-color: #fff;
-  --button-background-color: #f0f0f0;
+  /* --button-background-color: #f0f0f0; */
+  --button-background-color: #dbdbdb;
   --button-text-color: #000000;
   --card-background-color: #fafafa;
 }

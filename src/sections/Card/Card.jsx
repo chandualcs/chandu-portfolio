@@ -7,22 +7,34 @@ import skill_icon_dark from '../../assets/skill_dimond_dark.png';
 import skill_icon_light from '../../assets/skill_dimond_light.png';
 import resultIcon from '../../assets/result.png'
 
-const Card = ({ image, title, description, repoLink, skill, description21,description22,description23,description24,description25, shouldFlipp, resultLink1,resultLink2 }) => {
+const Card = ({ image, title, description, repoLink, skill, description21,description22,description23,description24,description25, shouldFlipp, resultLink1,resultLink2, video1,TeluguVideo,HindiVideo,BengaliVideo,KannadaVideo,hasVideo}) => {
     const { theme } = useTheme();
     const githubIcon = theme === 'light' ? githubLight : githubDark;
     const skill_icon = theme === 'light' ? skill_icon_light : skill_icon_dark;
     const [flipped, setFlipped] = useState(false);
+    const [showModal, setShowModal] = useState(false);
+    const [selectedLanguage, setSelectedLanguage] = useState("Telugu");
 
     const handleFlip = () => {
       if (shouldFlipp) {
         setFlipped(!flipped);
       }
     };
+    
     const handleMouseLeave = () => {
       setFlipped(false);
     };
+
+    const handleShowVideos = () => {
+      setShowModal(true);
+    };
+
+    const handleCloseModal = () => {
+      setShowModal(false);
+    };
   
     return (
+      <>
       <div className="card-container" onClick={handleFlip} onMouseLeave={handleMouseLeave}>
         <div className={`card ${flipped ? 'flipped' : ''}`}>
           <div className="card-front">
@@ -38,6 +50,11 @@ const Card = ({ image, title, description, repoLink, skill, description21,descri
                 <img src={githubIcon} alt="GitHub" className="github-icon" />
                 GitHub Repository
               </a>
+              {hasVideo && (
+                  <button className="show-videos-btn" onClick={(e) => { e.stopPropagation(); handleShowVideos(); }}>
+                    Demo Result
+                  </button>
+                  )}
             </div>
           </div>
           <div className="card-back">
@@ -57,6 +74,56 @@ const Card = ({ image, title, description, repoLink, skill, description21,descri
           </div>
         </div>
       </div>
+      
+      {/* Video Modal */}
+        {showModal && (
+          <div className="video-modal-overlay">
+            <div className="video-modal">
+              <button className="close-modal" onClick={handleCloseModal}>×</button>
+
+              <div className="video-container">
+                {/* Always show the first video */}
+                <video controls className="video-player">
+                  <source src={video1} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+
+                {/* Display only the selected language video */}
+                {selectedLanguage === "Telugu" && (
+                  <video controls className="video-player">
+                    <source src={TeluguVideo} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                )}
+                {selectedLanguage === "Hindi" && (
+                  <video controls className="video-player">
+                    <source src={HindiVideo} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                )}
+                {selectedLanguage === "Bengali" && (
+                  <video controls className="video-player">
+                    <source src={BengaliVideo} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                )}
+                {selectedLanguage === "Kannada" && (
+                  <video controls className="video-player">
+                    <source src={KannadaVideo} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                )}
+              </div>
+              <div className="language-buttons">
+                  <button className={selectedLanguage === 'Telugu' ? 'activeTab' : ''} onClick={() => setSelectedLanguage("Telugu")}>Telugu</button>
+                  <button className={selectedLanguage === 'Hindi' ? 'activeTab' : ''} onClick={() => setSelectedLanguage("Hindi")}>Hindi</button>
+                  <button className={selectedLanguage === 'Bengali' ? 'activeTab' : ''} onClick={() => setSelectedLanguage("Bengali")}>Bengali</button>
+                  <button className={selectedLanguage === 'Kannada' ? 'activeTab' : ''} onClick={() => setSelectedLanguage("Kannada")}>Kannada</button>
+                </div>
+            </div>
+          </div>
+        )}
+      </>
     );
 };
 
