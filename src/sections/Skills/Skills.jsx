@@ -27,8 +27,10 @@ function Skills() {
               <p className={styles.publicationJournal}>
                 <strong>Journal:</strong> International Journal of Information Technology, Singapore
               </p>
+              <p className={styles.publicationJournal}> <strong>Discription: </strong>Cost-effective staircase detection without reliance on depth sensors, addressing challenges such as low-light conditions and irregular stair structures.</p>
+              <p className={styles.publicationJournal}> <strong>Published on: </strong>28th February 2025</p>
               <p className={styles.publicationStatus}>
-                <strong>Status:</strong> Major reviews received, In Proceedings
+                <strong>DOI:</strong> <a href='https://link.springer.com/article/10.1007/s41870-025-02438-8' className="card-link" target="_blank" rel="noopener noreferrer">10.1007/s41870-025-02438-8</a>
               </p>
             </div>
           </div>

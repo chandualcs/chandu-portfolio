@@ -232,11 +232,33 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-height: 52vh;
+  overflow-y: scroll;
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #888 #f1f1f1; /* Thumb and Track */
+}
+
+.video-modal::-webkit-scrollbar {
+  width: 8px; /* Set scrollbar width */
+}
+
+.video-modal::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Light gray background */
+  border-radius: 10px;
+}
+
+.video-modal::-webkit-scrollbar-thumb {
+  background: #888; /* Dark gray scrollbar */
+  border-radius: 10px;
+}
+
+.video-modal::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker gray when hovered */
 }
 
 /* Close button */
 .close-modal {
-  position: absolute;
+  position: fixed;
   top: 10px;
   right: 15px;
   font-size: 24px;
@@ -245,6 +267,10 @@
   cursor: pointer;
   background-color: var(--button-active-background-color);
   border-radius: 50%;
+}
+.video-heading{
+  margin: 10px 0 10px 0;
+
 }
 
 /* Video container */

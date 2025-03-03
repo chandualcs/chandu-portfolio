@@ -5,14 +5,16 @@ import humanEmotionRecognition from '../../assets/Emotion-Detection.png';
 import LipSync from '../../assets/poster.jpg';
 import BlinkIt_sales from '../../assets/blinkit_dashboard.png';
 import Pizza_sales from '../../assets/Pizzas-sales.jpg';
-import lip_sync_pipiline from '../../assets/lip-sync-pipe.png'
-import stairDepth_model from '../../assets/stairDepth.png'
-import ProjectCard from '../../common/ProjectCard';
 import Original_video from '../../assets/Original_English.mp4';
 import Telugu_video from '../../assets/Telugu_translated.mp4';
 import Hindi_video from '../../assets/HindiVideo.mp4';
 import Bengali_video from '../../assets/BengaliVideo.mp4';
 import Kannada_video from '../../assets/KannadaVideo.mp4';
+import HindiFake from '../../assets/HindiFake_1.mp4';
+import TeluguFake from '../../assets/teluguFake_1.mp4';
+import BengaliFake from '../../assets/bengaliFake_1.mp4';
+import KannadaFake from '../../assets/kannadaFake_1.mp4';
+import video2 from '../../assets/originalFake_1.mp4';
 import Card from '../Card/Card';
 import { useTheme } from '../../common/ThemeContext';
 import React, { useState } from 'react';
@@ -48,6 +50,12 @@ const Projects = () => {
               HindiVideo={Hindi_video}
               BengaliVideo={Bengali_video}
               KannadaVideo={Kannada_video}
+              KannadaFake={KannadaFake}
+              HindiFake={HindiFake}
+              Bengalifake={BengaliFake}
+              TeluguFake={TeluguFake}
+              video2={video2}
+              
             />
             <Card
               shouldFlipp={true}

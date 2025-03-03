@@ -7,13 +7,14 @@ import skill_icon_dark from '../../assets/skill_dimond_dark.png';
 import skill_icon_light from '../../assets/skill_dimond_light.png';
 import resultIcon from '../../assets/result.png'
 
-const Card = ({ image, title, description, repoLink, skill, description21,description22,description23,description24,description25, shouldFlipp, resultLink1,resultLink2, video1,TeluguVideo,HindiVideo,BengaliVideo,KannadaVideo,hasVideo}) => {
+const Card = ({ image, title, description, repoLink, skill, description21,description22,description23,description24,description25, shouldFlipp, resultLink1,resultLink2, video1,video2,TeluguVideo,TeluguFake,HindiVideo,HindiFake,BengaliVideo,Bengalifake,KannadaVideo,KannadaFake,hasVideo}) => {
     const { theme } = useTheme();
     const githubIcon = theme === 'light' ? githubLight : githubDark;
     const skill_icon = theme === 'light' ? skill_icon_light : skill_icon_dark;
     const [flipped, setFlipped] = useState(false);
     const [showModal, setShowModal] = useState(false);
     const [selectedLanguage, setSelectedLanguage] = useState("Telugu");
+    const [selectedLanguage1, setSelectedLanguage1] = useState("Telugu1");
 
     const handleFlip = () => {
       if (shouldFlipp) {
@@ -77,10 +78,13 @@ const Card = ({ image, title, description, repoLink, skill, description21,descri
       
       {/* Video Modal */}
         {showModal && (
+          
           <div className="video-modal-overlay">
+            
             <div className="video-modal">
+            <p className="video-heading">Results with present available techniques.</p>
               <button className="close-modal" onClick={handleCloseModal}>×</button>
-
+              {/* first video-section */}
               <div className="video-container">
                 {/* Always show the first video */}
                 <video controls className="video-player">
@@ -120,6 +124,46 @@ const Card = ({ image, title, description, repoLink, skill, description21,descri
                   <button className={selectedLanguage === 'Bengali' ? 'activeTab' : ''} onClick={() => setSelectedLanguage("Bengali")}>Bengali</button>
                   <button className={selectedLanguage === 'Kannada' ? 'activeTab' : ''} onClick={() => setSelectedLanguage("Kannada")}>Kannada</button>
                 </div>
+
+                <p className="video-heading">Proof for inconsistency in generated lip movements.</p>
+                {/* second video-section */}
+                <div className="video-container">
+                <video controls className="video-player">
+                  <source src={video2} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                {selectedLanguage1 === "Telugu1" && (
+                  <video controls className="video-player">
+                    <source src={TeluguFake} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                )}
+                {selectedLanguage1 === "Hindi1" && (
+                  <video controls className="video-player">
+                    <source src={HindiFake} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                )}
+                {selectedLanguage1 === "Bengali1" && (
+                  <video controls className="video-player">
+                    <source src={Bengalifake} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                )}
+                {selectedLanguage1 === "Kannada1" && (
+                  <video controls className="video-player">
+                    <source src={KannadaFake} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                )}
+              </div>
+              <div className="language-buttons">
+                <button className={selectedLanguage1 === 'Telugu1' ? 'activeTab' : ''} onClick={() => setSelectedLanguage1("Telugu1")}>Telugu</button>
+                <button className={selectedLanguage1 === 'Hindi1' ? 'activeTab' : ''} onClick={() => setSelectedLanguage1("Hindi1")}>Hindi</button>
+                <button className={selectedLanguage1 === 'Bengali1' ? 'activeTab' : ''} onClick={() => setSelectedLanguage1("Bengali1")}>Bengali</button>
+                <button className={selectedLanguage1 === 'Kannada1' ? 'activeTab' : ''} onClick={() => setSelectedLanguage1("Kannada1")}>Kannada</button>
+              </div>
+
             </div>
           </div>
         )}
