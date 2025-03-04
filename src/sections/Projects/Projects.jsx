@@ -15,6 +15,7 @@ import TeluguFake from '../../assets/teluguFake_1.mp4';
 import BengaliFake from '../../assets/bengaliFake_1.mp4';
 import KannadaFake from '../../assets/kannadaFake_1.mp4';
 import video2 from '../../assets/originalFake_1.mp4';
+import video3 from '../../assets/originalFake_2.mp4';
 import Card from '../Card/Card';
 import { useTheme } from '../../common/ThemeContext';
 import React, { useState } from 'react';
@@ -55,6 +56,7 @@ const Projects = () => {
               Bengalifake={BengaliFake}
               TeluguFake={TeluguFake}
               video2={video2}
+              video3={video3}
               
             />
             <Card

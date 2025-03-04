@@ -7,7 +7,7 @@ import skill_icon_dark from '../../assets/skill_dimond_dark.png';
 import skill_icon_light from '../../assets/skill_dimond_light.png';
 import resultIcon from '../../assets/result.png'
 
-const Card = ({ image, title, description, repoLink, skill, description21,description22,description23,description24,description25, shouldFlipp, resultLink1,resultLink2, video1,video2,TeluguVideo,TeluguFake,HindiVideo,HindiFake,BengaliVideo,Bengalifake,KannadaVideo,KannadaFake,hasVideo}) => {
+const Card = ({ image, title, description, repoLink, skill, description21,description22,description23,description24,description25, shouldFlipp, resultLink1,resultLink2, video1,video2,video3,TeluguVideo,TeluguFake,HindiVideo,HindiFake,BengaliVideo,Bengalifake,KannadaVideo,KannadaFake,hasVideo}) => {
     const { theme } = useTheme();
     const githubIcon = theme === 'light' ? githubLight : githubDark;
     const skill_icon = theme === 'light' ? skill_icon_light : skill_icon_dark;
@@ -15,6 +15,7 @@ const Card = ({ image, title, description, repoLink, skill, description21,descri
     const [showModal, setShowModal] = useState(false);
     const [selectedLanguage, setSelectedLanguage] = useState("Telugu");
     const [selectedLanguage1, setSelectedLanguage1] = useState("Telugu1");
+    const [selectedVideo, setSelectedVideo] = useState("Real1");
 
     const handleFlip = () => {
       if (shouldFlipp) {
@@ -125,13 +126,27 @@ const Card = ({ image, title, description, repoLink, skill, description21,descri
                   <button className={selectedLanguage === 'Kannada' ? 'activeTab' : ''} onClick={() => setSelectedLanguage("Kannada")}>Kannada</button>
                 </div>
 
-                <p className="video-heading">Proof for inconsistency in generated lip movements.</p>
+                <p className="video-heading">Proof for inconsistency in generated lip landmarks.</p>
+                <div className="language-buttons">
+                  <button className={selectedVideo === 'Real1' ? 'activeTab' : ''} onClick={() => setSelectedVideo("Real1")}>Real1</button>
+                  <button className={selectedVideo === 'Real2' ? 'activeTab' : ''} onClick={() => setSelectedVideo("Real2")}>Real2</button>
+                </div>
                 {/* second video-section */}
                 <div className="video-container">
-                <video controls className="video-player">
+                {selectedVideo === 'Real1' &&(
+                  <video controls className="video-player">
                   <source src={video2} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
+                )}
+                {selectedVideo === 'Real2' &&(
+                  <video controls className="video-player">
+                  <source src={video3} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                )}
+                
+
                 {selectedLanguage1 === "Telugu1" && (
                   <video controls className="video-player">
                     <source src={TeluguFake} type="video/mp4" />
