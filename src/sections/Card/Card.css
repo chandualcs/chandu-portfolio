@@ -340,4 +340,8 @@
   .video-player {
       width: 90%; /* Make video take most of the width */
   }
+  .language-buttons{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }

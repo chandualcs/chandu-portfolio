@@ -7,7 +7,7 @@ import skill_icon_dark from '../../assets/skill_dimond_dark.png';
 import skill_icon_light from '../../assets/skill_dimond_light.png';
 import resultIcon from '../../assets/result.png'
 
-const Card = ({ image, title, description, repoLink, skill, description21,description22,description23,description24,description25, shouldFlipp, resultLink1,resultLink2, video1,video2,video3,TeluguVideo,TeluguFake,HindiVideo,HindiFake,BengaliVideo,Bengalifake,KannadaVideo,KannadaFake,hasVideo}) => {
+const Card = ({ image, title, description, repoLink, skill, description21,description22,description23,description24,description25, shouldFlipp, resultLink1,resultLink2, video1,video2,video3,TeluguVideo,TeluguFake,HindiVideo,HindiFake,BengaliVideo,Bengalifake,KannadaVideo,KannadaFake,HeyGen,hasVideo}) => {
     const { theme } = useTheme();
     const githubIcon = theme === 'light' ? githubLight : githubDark;
     const skill_icon = theme === 'light' ? skill_icon_light : skill_icon_dark;
@@ -171,12 +171,19 @@ const Card = ({ image, title, description, repoLink, skill, description21,descri
                     Your browser does not support the video tag.
                   </video>
                 )}
+                {selectedLanguage1 === "HeyGen" && (
+                  <video controls className="video-player">
+                    <source src={HeyGen} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                )}
               </div>
               <div className="language-buttons">
                 <button className={selectedLanguage1 === 'Telugu1' ? 'activeTab' : ''} onClick={() => setSelectedLanguage1("Telugu1")}>Telugu</button>
                 <button className={selectedLanguage1 === 'Hindi1' ? 'activeTab' : ''} onClick={() => setSelectedLanguage1("Hindi1")}>Hindi</button>
                 <button className={selectedLanguage1 === 'Bengali1' ? 'activeTab' : ''} onClick={() => setSelectedLanguage1("Bengali1")}>Bengali</button>
                 <button className={selectedLanguage1 === 'Kannada1' ? 'activeTab' : ''} onClick={() => setSelectedLanguage1("Kannada1")}>Kannada</button>
+                <button className={selectedLanguage1 === 'HeyGen' ? 'activeTab' : ''} onClick={() => setSelectedLanguage1("HeyGen")}>HeyGen</button>
               </div>
 
             </div>
