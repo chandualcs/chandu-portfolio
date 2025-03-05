@@ -33,7 +33,7 @@ function Hero() {
             <h1>
                 THE
                 <br />
-                GANG GANG
+                FOUR
             </h1>
             <h2>
                 Aspiring Data Scientists
