@@ -1,7 +1,7 @@
 import styles from './HeroStyles.module.css';
 import { Link } from 'react-scroll';
-// import heroImg from '../../assets/semi-formal_circle.png';
-import heroImg from '../../assets/Profile_trio.jpg';
+import heroImg from '../../assets/semi-formal_circle.png';
+// import heroImg from '../../assets/Profile_trio.jpg';
 import sun from '../../assets/sun.svg'
 import moon from '../../assets/moon.svg';
 import githubLight from '../../assets/github-light.svg';
@@ -31,12 +31,12 @@ function Hero() {
         <div className={styles.info}>
             
             <h1>
-                THE
+                Laxmi Chandra Shekar
                 <br />
-                FOUR
+                Avire
             </h1>
             <h2>
-                Aspiring Data Scientists
+                Aspiring Data Scientist
             </h2>
             <span>
                 <a href="https://github.com/chandualcs" target='_blank'>

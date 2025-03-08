@@ -5,9 +5,10 @@ import githubDark from '../../assets/github-dark.svg';
 import { useTheme } from '../../common/ThemeContext';
 import skill_icon_dark from '../../assets/skill_dimond_dark.png';
 import skill_icon_light from '../../assets/skill_dimond_light.png';
-import resultIcon from '../../assets/result.png'
+import resultIcon from '../../assets/result.png';
+import publicationIcon from '../../assets/publication.png'
 
-const Card = ({ image, title, description, repoLink, skill, description21,description22,description23,description24,description25, shouldFlipp, resultLink1,resultLink2, video1,video2,video3,TeluguVideo,TeluguFake,HindiVideo,HindiFake,BengaliVideo,Bengalifake,KannadaVideo,KannadaFake,HeyGen,hasVideo}) => {
+const Card = ({ image, title, description, repoLink, skill, description21,description22,description23,description24,description25, shouldFlipp, resultLink1,publication, video1,video2,video3,TeluguVideo,TeluguFake,HindiVideo,HindiFake,BengaliVideo,Bengalifake,KannadaVideo,KannadaFake,HeyGen,hasVideo, hasPublication}) => {
     const { theme } = useTheme();
     const githubIcon = theme === 'light' ? githubLight : githubDark;
     const skill_icon = theme === 'light' ? skill_icon_light : skill_icon_dark;
@@ -72,6 +73,10 @@ const Card = ({ image, title, description, repoLink, skill, description21,descri
                 <p className="card-link-back">{description25}</p>
                 </a>
               </div>
+              {hasPublication && (<a href={publication} className="card-link" target="_blank" rel="noopener noreferrer">
+                <img src={publicationIcon} alt="GitHub" className="github-icon" />
+                Publication
+              </a>)}
             </div>
           </div>
         </div>

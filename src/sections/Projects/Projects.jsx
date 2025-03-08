@@ -75,6 +75,8 @@ const Projects = () => {
               description24="=> Depth Module to generate depth of RGB images and sequential SE-ResNext blocks(Squeeze and excitation Grouped convolutions)"
               description25="Segmantation Result."
               resultLink1="https://github.com/chandualcs/StairDepth-A-Novel-Staircase-detection/blob/main/Results.png"
+              hasPublication='true'
+              publication='https://link.springer.com/article/10.1007/s41870-025-02438-8'
             />
             <Card
               shouldFlipp={false}
