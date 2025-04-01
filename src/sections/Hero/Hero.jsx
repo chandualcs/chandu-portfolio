@@ -21,6 +21,7 @@ function Hero() {
     const githubIcon = theme === 'light' ? githubLight : githubDark;
 
 
+
   return (
     <section id="hero" className={styles.container}>
         <div className={styles.colorModeContainer}>
@@ -60,6 +61,7 @@ function Hero() {
                 </a>
                 <Link to="Projects" smooth={true} duration={400}><button className="Projects">Projects</button></Link>
                 <Link to="skills" smooth={true} duration={800}><button className="Publications">Publications</button></Link>
+                
             </div>
             <div className={styles.letsConnect}>
             <Link to="contact" smooth={true} duration={400}><button className={styles.connect}>Let's Connect!🤝</button></Link>
