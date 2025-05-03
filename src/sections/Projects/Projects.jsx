@@ -44,9 +44,9 @@ const Projects = () => {
               description23="=> L(B) can be Telugu, Hindi, Kannada, Bengali, Chattisgari or Marathi."
               
               description24="=> Multilingual speech to text translation, text to speech generation with vocoder and audio based lip synchronizer."
-              resultLink1="https://github.com/chandualcs/Lip-Sync-video-Translator"
-              description25="English video translated to Telugu"
-              hasVideo={true}
+              resultLink1="https://multilingual-video-translation.netlify.app/"
+              description25="Visual Results."
+              hasVideo={false}
               video1={Original_video}
               TeluguVideo={Telugu_video}
               HindiVideo={Hindi_video}
